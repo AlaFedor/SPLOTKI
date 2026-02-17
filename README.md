@@ -41,19 +41,28 @@ Aplikacja obsługuje cały proces zakupowy – od dynamicznego wyświetlania aso
 
 ## Instalacja i Uruchomienie
 
-1. **Sklonuj repozytorium**:
-   ```bash
-   git clone [https://github.com/twoj-uzytkownik/splotki.git](https://github.com/twoj-uzytkownik/splotki.git)
+1. **Pobierz lub sklonuj repozytorium**
 
-2. **Zainstaluj zależności:**
+2. **W folderze "back" zainstaluj zależności:**
    ```bash
    npm install
 
-3. **Skonfiguruj bazę danych:**
-   ```bash
-   npx prisma migrate dev
+3. **Stwórz plik .env w folderze "back"**
+    - dodaj do niego ścieżkę do bazy danych
+      ```bash
+      DATABASE_URL="file:./dev.db"
 
-4. Uruchom serwer:
+4. **Skonfiguruj bazę danych:**
+   Uruchom migracje, aby stworzyć strukturę tabel (zatwierdź zmiany, jeśli zostaniesz o to zapytany):
+   ```bash
+   npx prisma migrate dev --name init
+
+5. **Wypełnienie bazy danymi**
+   Aby dodać początkowe produkty do sklepu, uruchom skrypt seedujący:
+   ```bash
+   node prisma/seed.js
+
+6. **Uruchom serwer**:
    ```bash
    node server.js
    ```
