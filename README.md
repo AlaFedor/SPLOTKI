@@ -1,13 +1,12 @@
 # Splotki - E-commerce Platform
 
-A simple e-commerce platform for handmade crochet products, built with Node.js, Express, Prisma, and vanilla JavaScript.
+A simple e-commerce platform for handmade crochet products, built with Node.js, Express, Prisma, and JavaScript.
 
 ## Features
 
 - **Product Catalog**: Browse products by categories (bestsellers, hats, bags, accessories)
 - **Shopping Cart**: Add/remove items, update quantities
 - **Order Management**: Place orders with customer details
-- **Admin Features**: (Future) Manage products and orders
 
 ## Tech Stack
 
@@ -43,7 +42,7 @@ SPLOTKI/
 
 ### Prerequisites
 
-- Node.js (v14+)
+- Node.js
 - npm
 
 ### Installation
@@ -88,9 +87,3 @@ npm test
 - **CartItem**: id, productId, quantity
 - **Order**: id, customer, email, phone, address, createdAt, items
 
-## Contributing
-
-1. Fork the repo
-2. Create a feature branch
-3. Commit changes
-4. Push and create a PR
