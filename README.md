@@ -48,14 +48,15 @@ SPLOTKI/
 ### Installation
 
 1. **Clone the repository**
+2. **Ensure .env file exists**
+   -if not create .env file in folder "backend" and paste
+   `DATABASE_URL="file:./dev.db"` into it
 
-2. **Backend Setup**:
+3. **Backend Setup**:
 
    ```bash
    cd backend
    npm install
-   # Ensure .env file exists with DATABASE_URL
-   echo 'DATABASE_URL="file:./dev.db"' > .env
    npx prisma migrate deploy
    npx prisma db seed
    npm start
@@ -63,7 +64,7 @@ SPLOTKI/
 
    Server runs on `http://localhost:3000`
 
-3. **Frontend**:
+4. **Frontend**:
    Open `frontend/index.html` in your browser. It connects to the backend API.
 
 ### Running Tests
