@@ -94,7 +94,3 @@ npm test
 2. Create a feature branch
 3. Commit changes
 4. Push and create a PR
-
-## License
-
-ISC
