@@ -47,13 +47,15 @@ SPLOTKI/
 
 ### Installation
 
-1. **Clone the repository** (if applicable) or navigate to the project folder.
+1. **Clone the repository**
 
 2. **Backend Setup**:
 
    ```bash
    cd backend
    npm install
+   # Ensure .env file exists with DATABASE_URL
+   echo 'DATABASE_URL="file:./dev.db"' > .env
    npx prisma migrate deploy
    npx prisma db seed
    npm start
@@ -86,4 +88,3 @@ npm test
 - **Category**: id, name
 - **CartItem**: id, productId, quantity
 - **Order**: id, customer, email, phone, address, createdAt, items
-
